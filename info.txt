@@ -7,9 +7,23 @@ Spring Boot based REST API that takes a URL and returns a shortened URL save the
 
 I thought of two approaches
 	1.Generating hashes for the fullUrl and storing them as key value pairs in redis cache or in postgres database
-	2.Performing a Base62 conversion from Base10 on the id of stored fullUrl
+	2.Performing a Base62 conversion from Base10 on the id of stored fullUrl.
+	3.Performing hashing on fullurl and then performing base62 approach on generated hash value.
+	
+		Base62 approach includes 62 characters which are a-z, A-Z and 0-9
 
 		In case of hashes, sometimes the hashes can be longer than actual URL. 
 		Another issue was the readability and ease of remembering. 
 		So, I went with the second approach. With the Base conversion approach, 
 		even the maximum value of Long produces 10 characters which is still somewhat easy to remember. 
+		Even we can apply base62 approach for generated Long 10 characters to generate even small url of length 7 characters.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
