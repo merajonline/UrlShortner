@@ -22,6 +22,12 @@ I thought of two approaches
 		
 		
 		
+we can use redis which is persistent storage like cache and is very fast, for story fullurl and sort url as key value pair.		
+		
+		
+		
+		
+		
 		
 		
 		
